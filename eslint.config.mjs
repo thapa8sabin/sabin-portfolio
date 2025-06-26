@@ -15,6 +15,7 @@ const eslintConfig = [
     "rules": {
       "react/no-unescaped-entities": "off",
       "@typescript-eslint/quotes": "off",
+      "@typescript-eslint/no-explicit-any": "off",
       "quotes": [0],
       "avoidEscape": 0,
       "allowTemplateLiterals": 0,
