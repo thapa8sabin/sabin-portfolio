@@ -1,0 +1,14 @@
+services:
+  web:
+    container_name: portfolio
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
+    stdin_open: true         # Allows interactive shell
+    tty: true                # Allocates a pseudo-TTY
+    entrypoint: /bin/sh      # Opens shell instead of auto-running anything
