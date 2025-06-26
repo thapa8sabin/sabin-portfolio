@@ -1,0 +1,14 @@
+    {
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true,
+      "editor.detectIndentation": true,
+      "files.insertFinalNewline": true,
+      "files.trimTrailingWhitespace": true,
+       "editor.formatOnSave": true,
+       "editor.rulers": [
+        {
+            "column": 120,
+            "color": "#ff0000"
+        }
+      ]
+    }

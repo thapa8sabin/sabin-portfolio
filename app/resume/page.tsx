@@ -1,200 +1,27 @@
 'use client'
 
 import {
-    FaHtml5,
-    FaPhp,
-    FaJs,
-    FaDocker,
-    FaJenkins,
-    FaNodeJs,
-    FaAngular,
-    FaJira
-} from 'react-icons/fa'
-
-import {
-    SiBootstrap,
-    SiNextdotjs,
-    SiScrumalliance,
-    SiKubernetes,
-    SiRabbitmq,
-    SiApachekafka,
-    SiRedis,
-    SiMysql,
-} from "react-icons/si"
-
-import {
     Tabs,
     TabsContent,
     TabsList,
     TabsTrigger
 } from "@/components/ui/tabs"
-
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger
 } from "@/components/ui/tooltip"
-
 import { motion } from 'framer-motion'
 import { ScrollArea } from '@radix-ui/react-scroll-area'
 
-// about data
-const about = {
-    title: 'About me',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quae reprehenderit necessitatibus! Blanditiis laboriosam voluptatibus dolorem itaque voluptas perspiciatis.',
-    info: [
-        {
-            fieldName: 'Name',
-            fieldValue: 'Sabin Thapa'
-        },
-        {
-            fieldName: 'Phone',
-            fieldValue: '(+977) 9748 26 3456',
-        },
-        {
-            fieldName: 'Whatsapp',
-            fieldValue: 'call:9748263456'
-        },
-        {
-            fieldName: 'Email',
-            fieldValue: 'thapasabin8@gmail.com'
-        },
-        {
-            fieldName: 'Freelance',
-            fieldValue: 'Available'
-        },
-        {
-            fieldName: 'Languages',
-            fieldValue: 'Nepali, Hindi & English'
-        },
-    ]
-}
-
-// experience data
-const experience = {
-    icon: '/assets/resume/badge.svg',
-    title: 'My Experiences',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quae reprehenderit necessitatibus! Blanditiis laboriosam voluptatibus dolorem itaque voluptas perspiciatis.',
-    items: [
-        {
-            company: 'F1Soft International Pvt. Ltd.',
-            position: 'Software Engineer',
-            duration: '2021 - 2023'
-        },
-        {
-            company: 'Computalaya Networks Pvt. Ltd.',
-            position: 'Software Engineer',
-            duration: '2018 - 2020'
-        },
-        {
-            company: 'Proshore Nepal Pvt. Ltd.',
-            position: 'Wordpress Plugin Developer',
-            duration: '2016 - 2018'
-        },
-        {
-            company: 'Smart Solutions Pvt. Ltd.',
-            position: 'Software Developer',
-            duration: '2014 - 2016'
-        }
-    ]
-}
-
-// education data
-const education = {
-    icon: '/assets/resume/cap.svg',
-    title: 'My Education',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quae reprehenderit necessitatibus! Blanditiis laboriosam voluptatibus dolorem itaque voluptas perspiciatis.',
-    items: [
-        {
-            insitution: 'Scrum Alliance',
-            degree: 'Certified Scrum Developer',
-            duration: 'Early 2023'
-        },
-        {
-            insitution: 'Softwarica College of IT & E-Commerece',
-            degree: 'BSc. Hons in Computer Science',
-            duration: '2012 - 2015'
-        }
-    ]
-}
-
-// skills data
-const skills = {
-    title: 'My Skills',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quae reprehenderit necessitatibus! Blanditiis laboriosam voluptatibus dolorem itaque voluptas perspiciatis.',
-    skillLists: [
-        {
-            icons: <FaHtml5 />,
-            name: 'HTML 5'
-        },
-        {
-            icons: <FaPhp />,
-            name: 'PHP'
-        },
-        {
-            icons: <FaDocker />,
-            name: 'Docker'
-        },
-        {
-            icons: <FaJenkins />,
-            name: 'Jenkins'
-        },
-        {
-            icons: <FaJs />,
-            name: 'Javascript'
-        },
-        {
-            icons: <FaNodeJs />,
-            name: 'node.js'
-        },
-        {
-            icons: <FaAngular />,
-            name: 'Angular Js & Cli'
-        },
-        {
-            icons: <SiBootstrap />,
-            name: 'Bootstrap'
-        },
-        {
-            icons: <SiNextdotjs />,
-            name: 'Next.js'
-        },
-        {
-            icons: <SiScrumalliance />,
-            name: 'Scrum'
-        },
-        {
-            icons: <FaJira />,
-            name: 'jira'
-        },
-        {
-            icons: <SiKubernetes />,
-            name: 'k3s'
-        },
-        {
-            icons: <SiRabbitmq />,
-            name: 'rabbitMQ'
-        },
-        {
-            icons: <SiApachekafka />,
-            name: 'Apache Kafka'
-        },
-        {
-            icons: <SiRedis />,
-            name: 'Redis'
-        },
-        {
-            icons: <SiMysql />,
-            name: 'MySQL'
-        },
-    ]
-}
+// data
+import { about, experience, education, skills } from './resume_data'
 
 const Resume = () => {
     return (
         <motion.div
-            initial={{opacity: 0}}
+            initial={{ opacity: 0 }}
             animate={{
                 opacity: 1,
                 transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }
@@ -220,7 +47,7 @@ const Resume = () => {
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
                                         {
-                                            experience.items.map((item, index) => {
+                                            experience.items.map((item: ExpItems, index: number) => {
                                                 return (
                                                     <li key={index} className='bg-#232329 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
                                                         <span className='text-accent'>{item.duration}</span>
@@ -247,7 +74,7 @@ const Resume = () => {
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
                                         {
-                                            education.items.map((item, index) => {
+                                            education.items.map((item: EducationList, index: number) => {
                                                 return (
                                                     <li key={index} className='bg-#232329 h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
                                                         <span className='text-accent'>{item.duration}</span>
@@ -276,7 +103,7 @@ const Resume = () => {
                                 <ScrollArea className='h-[400px]'>
                                     <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                                         {
-                                            skills.skillLists.map( (skill, index) => {
+                                            skills.skillLists.map((skill: SkillList, index: number) => {
                                                 return (
                                                     <li key={index}>
                                                         <TooltipProvider delayDuration={100}>
@@ -291,11 +118,11 @@ const Resume = () => {
                                                         </TooltipProvider>
                                                     </li>
                                                 )
-                                            } )
+                                            })
                                         }
                                     </ul>
                                 </ScrollArea>
-                                
+
                             </div>
                         </TabsContent>
 
@@ -306,7 +133,7 @@ const Resume = () => {
                                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
                                 <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
                                     {
-                                        about.info.map((info, index) => {
+                                        about.info.map((info: AboutInfo, index: number) => {
                                             return (
                                                 <li key={index} className='flex items-center justify-center xl:justify-start gap-4'>
                                                     <span className='text-white/60'>{info.fieldName}</span>

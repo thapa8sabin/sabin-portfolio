@@ -5,13 +5,13 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select"
 import {
-    FaPhoneAlt, 
+    FaPhoneAlt,
     FaEnvelope,
     FaMapMarkedAlt,
 } from "react-icons/fa"
 import { motion } from "framer-motion"
 
-const info = [
+const info: Info[] = [
     {
         icon: <FaPhoneAlt />,
         title: "Phone",
@@ -33,8 +33,8 @@ const info = [
 const Contact = () => {
     return (
         <motion.section
-            initial={{opacity: 0}}
-            animate={{opacity: 1, transition: {delay: 2.4 }}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 2.4 } }}
             className="py-6"
         >
             <div className="container mx-auto">
@@ -81,9 +81,9 @@ const Contact = () => {
                     <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
                         <ul className="flex flex-col gap-10">
                             {
-                                info.map((item, index) => {
+                                info.map((item: Info, index: number) => {
                                     return (
-                                        <li 
+                                        <li
                                             key={index}
                                             className="flex items-center gap-6"
                                         >

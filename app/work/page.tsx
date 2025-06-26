@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion"
-import  React, { useState } from "react"
+import React, { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import { BsArrowUpRight, BsGithub } from "react-icons/bs"
@@ -10,13 +10,13 @@ import Link from "next/link"
 import Image from "next/image"
 import WorkSliderButton from "@/components/WorkSliderButton"
 
-const projects = [
+const projects: ProjectItem[] = [
     {
         num: '01',
         category: 'frontend',
         title: 'project 1',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit facere magni tenetur provident quos dicta asperiores ex! Excepturi dicta repellat maxime illum alias hic veniam laudantium delectus.',
-        stacks: [ "Html 5", "Css 3", "Javascript" ],
+        stacks: ["Html 5", "Css 3", "Javascript"],
         image: '/assets/work/thumb1.png',
         live: '',
         github: ''
@@ -26,7 +26,7 @@ const projects = [
         category: 'fullstack',
         title: 'project 2',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit facere magni tenetur provident quos dicta asperiores ex! Excepturi dicta repellat maxime illum alias hic veniam laudantium delectus.',
-        stacks: [ "Html 5", "Css 3", "Javascript" ],
+        stacks: ["Html 5", "Css 3", "Javascript"],
         image: '/assets/work/thumb2.png',
         live: '',
         github: ''
@@ -36,7 +36,7 @@ const projects = [
         category: 'frontend',
         title: 'project 3',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit facere magni tenetur provident quos dicta asperiores ex! Excepturi dicta repellat maxime illum alias hic veniam laudantium delectus.',
-        stacks: [ "Next Js", "Tailwind" ],
+        stacks: ["Next Js", "Tailwind"],
         image: '/assets/work/thumb1.png',
         live: '',
         github: ''
@@ -46,14 +46,14 @@ const projects = [
 
 const Work = () => {
     const [project, setProject] = useState(projects[0]);
-    const handleSlideChange = (swiper: any) => {
-        const currentIndex = swiper.activeIndex;
+    const handleSlideChange = (swiper: any): void => {
+        const currentIndex: number = swiper.activeIndex;
         setProject(projects[currentIndex])
     }
     return (
-        <motion.section 
-            initial={{opacity: 0}}
-            animate={{opacity: 1, transition: {delay: 2.4 }}}
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 2.4 } }}
             className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
         >
             <div className="container mx-auto">
@@ -67,7 +67,7 @@ const Work = () => {
                             <p className="text-white/60">{project.description}</p>
                             {/* stacks */}
                             <ul className="flex gap-4">
-                                {project.stacks.map((item, index) => {
+                                {project.stacks.map((item: string, index) => {
                                     return (
                                         <li key={index} className="text-xl text-accent">
                                             {item}
@@ -127,7 +127,7 @@ const Work = () => {
                                                 <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                                                 {/* image */}
                                                 <div className="relative w-full h-full">
-                                                    <Image src={project.image} alt='' fill className="object-cover"/ >
+                                                    <Image src={project.image} alt='' fill className="object-cover" />
                                                 </div>
                                             </div>
                                         </SwiperSlide>
@@ -140,7 +140,7 @@ const Work = () => {
                     </div>
                 </div>
             </div>
-        </motion.section>   
+        </motion.section>
     )
 }
 

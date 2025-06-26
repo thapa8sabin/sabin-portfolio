@@ -29,13 +29,13 @@ const links = [
 ];
 
 const MobileNav = () => {
-    
-    const pathname = usePathname()
-    
+
+    const pathname: string = usePathname()
+
     return (
         <Sheet>
             <SheetTrigger className="flex justify-center items-center">
-                <CiMenuFries className="text-[32px] text-accent"/>
+                <CiMenuFries className="text-[32px] text-accent" />
             </SheetTrigger>
             <SheetContent className="flex flex-col">
                 {/* Logo */}
@@ -49,15 +49,15 @@ const MobileNav = () => {
 
                 {/* nav */}
                 <nav className="flex flex-col justify-center items-center gap-8">
-                    { links.map((link, index) => {
+                    {links.map((link, index) => {
                         return (
                             <Link
+                                key={index}
                                 href={link.path}
-                                className={`${
-                                    link.path === pathname && "text-accent border-b-2 border-accent"
-                                } text-xl capitalize hover:text-accent transition-all`}
-                                >
-                                    {link.name}
+                                className={`${link.path === pathname && "text-accent border-b-2 border-accent"
+                                    } text-xl capitalize hover:text-accent transition-all`}
+                            >
+                                {link.name}
                             </Link>
                         )
                     })}

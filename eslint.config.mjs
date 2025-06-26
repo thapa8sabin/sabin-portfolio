@@ -13,7 +13,14 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     "rules": {
-      "*": "off"
+      "react/no-unescaped-entities": "off",
+      "@typescript-eslint/quotes": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "quotes": [0],
+      "avoidEscape": 0,
+      "allowTemplateLiterals": 0,
+      "no-useless-escape": 0
     }
   }
 ];
