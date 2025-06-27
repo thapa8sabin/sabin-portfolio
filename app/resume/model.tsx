@@ -6,7 +6,7 @@ interface About {
 
 interface AboutInfo {
     fieldName: string,
-    fieldValue: string
+    fieldValue: any
 }
 
 interface Experience {

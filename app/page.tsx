@@ -1,8 +1,7 @@
+import CvDownloader from "@/components/CvDownloader"
 import Photo from "@/components/Photo"
 import Socials from "@/components/Socials"
 import Stacks from "@/components/Stacks"
-import { Button } from "@/components/ui/button"
-import { FiDownload } from "react-icons/fi"
 
 const Home = () => {
     return (
@@ -17,18 +16,11 @@ const Home = () => {
                             <span className="text-accent">Sabin Thapa</span>
                         </h1>
                         <p className="max-w-[500px] mb-9 text-white/80">
-                            I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.
+                           A seasoned web developer and software engineer with deep expertise in full-stack development, DevOps, and technical leadership, delivering scalable digital solutions and driving remote-ready innovation.
                         </p>
                         {/* button and social links */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
-                            <Button
-                                variant={"outline"}
-                                size={"lg"}
-                                className="uppercase flex items-centerg gap-2"
-                            >
-                                <span>Download CV</span>
-                                <FiDownload className="text-xl" />
-                            </Button>
+                            <CvDownloader />
 
                             <div className="mb-8 xl:mb-0">
                                 <Socials />

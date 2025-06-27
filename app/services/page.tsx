@@ -7,28 +7,46 @@ import Link from "next/link"
 const services: SericeItem[] = [
     {
         num: "01",
-        title: "Software Developer",
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+        title: "Web Developer",
+        description: "Covers frontend and backend development, including frameworks like Symfony, Angular, hyperf, redis, MySQL, NextJs etc. API integrations and data-driven web solutions",
         href: ""
     },
     {
         num: "02",
-        title: "Solution Architecture",
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+        title: "Software Engineering",
+        description: "End-to-end software development lifecycle expertise. Building robust, secure, and high-performance applications. Problem-solving complex technical challenges",
         href: ""
     },
     {
         num: "03",
-        title: "Team Leader",
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+        title: "DevOps & CI/CD",
+        description: "Docker containerization, Kubernetes orchestration, and Rancher management. Git, Jenkins, and automated deployment pipelines. Optimizing development workflows for efficiency and reliability.",
         href: ""
     },
     {
         num: "04",
-        title: "Live Technical Supports",
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.",
+        title: "Technical Consulting",
+        description: "Advising on software architecture, system design, and technology selection. Code review, best practices implementation, and performance optimization. Guiding businesses in technical decision-making",
         href: ""
     },
+    {
+        num: "05",
+        title: "Remote Engineering & Team Leadership",
+        description: "Managing and collaborating with cross-functional teams remotely. Leading software engineering projects with Agile methodologies. Streamlining communication and project delivery in distributed environments",
+        href: ""
+    },
+    {
+        num: "06",
+        title: "Application Modernization & Optimization",
+        description: "Upgrading legacy applications to modern technology stacks. Performance tuning and optimization for scalable software solutions. Implementing best practices for efficient code and infrastructure.",
+        href: ""
+    },
+    {
+        num: "07",
+        title: "Automation & Scripting",
+        description: "Developing custom scripts for workflow automation. API automation, task scheduling, and process optimization. Leveraging JavaScript and other technologies for automation",
+        href: ""
+    }
 ]
 
 const Services = () => {

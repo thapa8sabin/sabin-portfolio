@@ -13,32 +13,112 @@ import WorkSliderButton from "@/components/WorkSliderButton"
 const projects: ProjectItem[] = [
     {
         num: '01',
-        category: 'frontend',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit facere magni tenetur provident quos dicta asperiores ex! Excepturi dicta repellat maxime illum alias hic veniam laudantium delectus.',
-        stacks: ["Html 5", "Css 3", "Javascript"],
+        category: 'Superstack',
+        title: 'BizMessage',
+        description: `Text message platform trusted by thousands of businesses just like yours. With Biz Message System, sending important updates, promotions, and staying connected is simpler than ever. Enjoy seamless communication that's fast, reliable, and effective. Let's start messaging.`,
+        stacks: ["DDD", "Angular", "hyperf", "Symfony", "MinIO", "Docker", "Kubernetes", "redis", "Kafka", "Jenkins", "GitLab"],
         image: '/assets/work/thumb1.png',
-        live: '',
+        live: 'https://www.bizmessages.com/',
         github: ''
     },
     {
         num: '02',
-        category: 'fullstack',
-        title: 'project 2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit facere magni tenetur provident quos dicta asperiores ex! Excepturi dicta repellat maxime illum alias hic veniam laudantium delectus.',
-        stacks: ["Html 5", "Css 3", "Javascript"],
-        image: '/assets/work/thumb2.png',
+        category: 'Superstack',
+        title: 'FeeMS',
+        description: 'A banking application designed for officials to efficiently and conveniently manage Fee Management Services (FeeMS) across Mobile Banking, Demat accounts, Lockers, and Internet Banking.',
+        stacks: ["DDD", "Angular", "hyperf", "Symfony", "MinIO", "Docker", "Kubernetes", "redis", "rabbitMQ", "Jenkins", "GitLab", "MySQL"],
+        image: '/assets/work/f1soft.png',
         live: '',
         github: ''
     },
     {
         num: '03',
-        category: 'frontend',
-        title: 'project 3',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit facere magni tenetur provident quos dicta asperiores ex! Excepturi dicta repellat maxime illum alias hic veniam laudantium delectus.',
-        stacks: ["Next Js", "Tailwind"],
-        image: '/assets/work/thumb1.png',
+        category: 'Superstack',
+        title: 'Secured Transaction Registry Office',
+        description: 'This is the site for searching for notices of security interests in movable property and for registering notices of security interests in movable property.',
+        stacks: ["DDD", "Angular", "hyperf", "Symfony", "MinIO", "Docker", "Kubernetes", "redis", "Jenkins", "GitLab", "MySQL"],
+        image: '/assets/work/stro.png',
+        live: 'https://stro.org.np/#/',
+        github: ''
+    },
+    {
+        num: '04',
+        category: 'Backend',
+        title: 'Nepal Education Portals',
+        description: 'An education-based online platform where students can interact with colleges and different education facility providers like scholarship providers to know, apply and process for their desired courses.',
+        stacks: ["Laravel", "Vuejs", "Docker", "GitLab", "MySQL"],
+        image: '/assets/work/nep.png',
+        live: 'https://nepaleducationportal.com/',
+        github: ''
+    },
+    {
+        num: '04',
+        category: 'Backend',
+        title: 'Nepguide',
+        description: 'Based on the property management system, the application allows travellers to book hotels, vehicles & planes to reach their destiny.',
+        stacks: ["Laravel", "CodeIgniter", "GitLab", "MySQL"],
+        image: '/assets/work/computalaya.png',
         live: '',
+        github: ''
+    },
+    {
+        num: '05',
+        category: 'Fullstack',
+        title: 'Pagoda Ayurveda',
+        description: 'N/A',
+        stacks: ["Wordpress", "GitLab", "MySQL"],
+        image: '/assets/work/computalaya.png',
+        live: 'https://pagodaayurveda.com/',
+        github: ''
+    },
+    {
+        num: '06',
+        category: 'Backend',
+        title: 'Impact Energy Nepal',
+        description: 'N/A',
+        stacks: ["Laravel", "GitLab", "React", "MySQL"],
+        image: '/assets/work/computalaya.png',
+        live: 'https://impactenergynepal.com/',
+        github: ''
+    },
+    {
+        num: '06',
+        category: 'Fullstack',
+        title: 'Hangover Nepal',
+        description: 'N/A',
+        stacks: ["Virtuemart", "GitLab", "MySQL", "Google maps"],
+        image: '/assets/work/computalaya.png',
+        live: 'https://dev.hangovernepal.com/',
+        github: ''
+    },
+    {
+        num: '07',
+        category: 'Wordpress plugin',
+        title: 'Exportfeed',
+        description: 'Etsy Marketplace Integration for WooCommerce: Real-time Order, Inventory and Product Sync. Streamline your e-commerce operations with seamless product, order, and inventory sync between WooCommerce and Etsy. Simplify product import and export, ensuring accurate stock levels and efficient order management.',
+        stacks: ["Virtuemart", "Wordpress", "MySQL", "Google Merchants", "Etsy", "Amazon MWS"],
+        image: '/assets/work/exportfeed.png',
+        live: 'https://wordpress.org/plugins/exportfeed-for-woocommerce-product-to-etsy/',
+        github: ''
+    },
+    {
+        num: '08',
+        category: 'Ecommerce',
+        title: 'Gold Durbar',
+        description: 'Online e-commerce for jewellery store',
+        stacks: ["Zencart", "MySQL"],
+        image: '/assets/work/smart.png',
+        live: 'https://www.instagram.com/golddurbar/',
+        github: ''
+    },
+    {
+        num: '09',
+        category: 'Backend',
+        title: 'BKFK',
+        description: 'An online portal for young enterpreneur',
+        stacks: ["Joomla", "MySQL"],
+        image: '/assets/work/smart.png',
+        live: 'https://www.bykidsforkids.co/',
         github: ''
     },
 ]
@@ -62,11 +142,12 @@ const Work = () => {
                         <div className="flex flex-col gap-[30px] h-[50%]">
                             {/* outline num */}
                             <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
+                            <span className="text-accent text-[42px] font-extralight">{project.title}</span>
                             {/* project category */}
                             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
                             <p className="text-white/60">{project.description}</p>
                             {/* stacks */}
-                            <ul className="flex gap-4">
+                            <ul className="flex flex-wrap gap-4">
                                 {project.stacks.map((item: string, index) => {
                                     return (
                                         <li key={index} className="text-xl text-accent">

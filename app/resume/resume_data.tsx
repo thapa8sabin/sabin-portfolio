@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
     FaHtml5,
     FaPhp,
@@ -24,7 +25,9 @@ import {
 // about data
 export const about: About = {
     title: 'About me',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quae reprehenderit necessitatibus! Blanditiis laboriosam voluptatibus dolorem itaque voluptas perspiciatis.',
+    description: `I'm a web developer and software engineer with close to ten years of experience building robust, full-stack web applications. I specialize in PHP, Symfony, and Angular, and I’ve led cross-functional teams to deliver impactful projects from end to end. Over the years, I’ve also grown deeply skilled in modern DevOps practices—working with Docker, Kubernetes via Rancher, Git, and Jenkins to streamline deployment and ensure scalable, reliable systems.
+    I’m always looking for smarter ways to automate workflows, solve challenging problems, and build tech that makes a real difference. Remote collaboration comes naturally to me, and I'm excited to contribute to teams that value clean architecture, thoughtful design, and continuous learning.
+    `,
     info: [
         {
             fieldName: 'Name',
@@ -32,15 +35,15 @@ export const about: About = {
         },
         {
             fieldName: 'Phone',
-            fieldValue: '(+977) 9748 26 3456',
+            fieldValue: <Link href={"tel://9779748263456"} target='_blank'>(+977) 9748 26 3456</Link>,
         },
         {
             fieldName: 'Whatsapp',
-            fieldValue: 'call:9748263456'
+            fieldValue: <Link href={"https://wa.me/9779748263456"}> Text Me</Link>
         },
         {
             fieldName: 'Email',
-            fieldValue: 'thapasabin8@gmail.com'
+            fieldValue: <Link href={"mailto://thapasabin8@gmail.com"}>thapasabin8@gmail.com</Link>
         },
         {
             fieldName: 'Freelance',
@@ -57,7 +60,7 @@ export const about: About = {
 export const experience: Experience = {
     icon: '/assets/resume/badge.svg',
     title: 'My Experiences',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quae reprehenderit necessitatibus! Blanditiis laboriosam voluptatibus dolorem itaque voluptas perspiciatis.',
+    description: 'With nearly a decade of hands-on experience in web development and software engineering, I have delivered scalable, high-performance applications across diverse industries. I’ve led cross-functional teams to execute complex projects, combining strong technical leadership with deep expertise in full-stack technologies like PHP, Symfony, and Angular. My DevOps skill set includes containerization with Docker, orchestration using Kubernetes (via Rancher), and automation with Git and Jenkins, enabling reliable CI/CD workflows. I’m passionate about solving problems, optimizing systems, and building impactful digital products—especially in remote, collaborative environments.',
     items: [
         {
             company: 'F1Soft International Pvt. Ltd.',
@@ -86,7 +89,7 @@ export const experience: Experience = {
 export const education: Education = {
     icon: '/assets/resume/cap.svg',
     title: 'My Education',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quae reprehenderit necessitatibus! Blanditiis laboriosam voluptatibus dolorem itaque voluptas perspiciatis.',
+    description: `I hold a Bachelor's degree in Bsc. Hons In Computer Science, which laid the foundation for my career in software engineering and full-stack development. Additionally, I'm a Certified Scrum Developer (CSD) through the Scrum Alliance, demonstrating my commitment to agile best practices and collaborative, team-driven development.`,
     items: [
         {
             insitution: 'Scrum Alliance',
@@ -104,7 +107,7 @@ export const education: Education = {
 // skills data
 export const skills: Skill = {
     title: 'My Skills',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quae reprehenderit necessitatibus! Blanditiis laboriosam voluptatibus dolorem itaque voluptas perspiciatis.',
+    description: 'I excel across 12+ technology stacks, combining deep proficiency in full-stack development, DevOps, and automation. With strong command over PHP, Symfony, Angular, and JavaScript, I build responsive, data-driven applications. I’m also highly skilled in Docker, Kubernetes (Rancher), Git, Jenkins, and CI/CD workflows—ensuring seamless deployment and scalable infrastructure. My experience leading cross-functional teams and scripting for workflow automation reinforces my ability to deliver end-to-end digital solutions in modern development environments.',
     skillLists: [
         {
             icons: <FaHtml5 />,
