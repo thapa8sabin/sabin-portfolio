@@ -52,7 +52,7 @@ const projects: ProjectItem[] = [
         github: ''
     },
     {
-        num: '04',
+        num: '05',
         category: 'Backend',
         title: 'Nepguide',
         description: 'Based on the property management system, the application allows travellers to book hotels, vehicles & planes to reach their destiny.',
@@ -62,7 +62,7 @@ const projects: ProjectItem[] = [
         github: ''
     },
     {
-        num: '05',
+        num: '06',
         category: 'Fullstack',
         title: 'Pagoda Ayurveda',
         description: 'N/A',
@@ -72,7 +72,7 @@ const projects: ProjectItem[] = [
         github: ''
     },
     {
-        num: '06',
+        num: '07',
         category: 'Backend',
         title: 'Impact Energy Nepal',
         description: 'N/A',
@@ -82,7 +82,7 @@ const projects: ProjectItem[] = [
         github: ''
     },
     {
-        num: '06',
+        num: '08',
         category: 'Fullstack',
         title: 'Hangover Nepal',
         description: 'N/A',
@@ -92,7 +92,7 @@ const projects: ProjectItem[] = [
         github: ''
     },
     {
-        num: '07',
+        num: '09',
         category: 'Wordpress plugin',
         title: 'Exportfeed',
         description: 'Etsy Marketplace Integration for WooCommerce: Real-time Order, Inventory and Product Sync. Streamline your e-commerce operations with seamless product, order, and inventory sync between WooCommerce and Etsy. Simplify product import and export, ensuring accurate stock levels and efficient order management.',
@@ -102,7 +102,7 @@ const projects: ProjectItem[] = [
         github: ''
     },
     {
-        num: '08',
+        num: '10',
         category: 'Ecommerce',
         title: 'Gold Durbar',
         description: 'Online e-commerce for jewellery store',
@@ -112,7 +112,7 @@ const projects: ProjectItem[] = [
         github: ''
     },
     {
-        num: '09',
+        num: '11',
         category: 'Backend',
         title: 'BKFK',
         description: 'An online portal for young enterpreneur',
