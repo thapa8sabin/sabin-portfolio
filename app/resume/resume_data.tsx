@@ -65,7 +65,7 @@ export const experience: Experience = {
         {
             company: 'F1Soft International Pvt. Ltd.',
             position: 'Software Engineer',
-            duration: '2021 - 2023'
+            duration: '2021 - 2024'
         },
         {
             company: 'Computalaya Networks Pvt. Ltd.',
